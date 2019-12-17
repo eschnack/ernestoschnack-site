@@ -1,0 +1,16 @@
+backend:
+  name: test-repo
+media_folder: static/images
+public_folder: /images
+collections:
+  - name: "music"
+    label: "Music"
+    folder: "src/pages/music/"
+    create: true
+    fields:
+      - { name: "type", label: "Type", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "spotify", label: "Spotify", widget: "string" }
+      - { name: "apple", label: "Apple", widget: "string" }
+      - { name: "cover", label: "Cover", widget: "image" }

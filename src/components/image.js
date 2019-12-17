@@ -23,10 +23,19 @@ const Image = () => {
           }
         }
       }
+      HerramientaImage: file(
+        relativePath: { eq: "herramienta-cover-web.png" }
+      ) {
+        childImageSharp {
+          sizes(maxWidth: 400) {
+            ...GatsbyImageSharpSizes
+          }
+        }
+      }
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img sizes={data.HerramientaImage.childImageSharp.sizes} />
 }
 
 export default Image

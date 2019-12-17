@@ -1,0 +1,272 @@
+import React from "react"
+import "./mystyles.scss"
+import { Link, graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import { MdFileDownload, MdShoppingCart } from "react-icons/md"
+
+import Layout from "../components/layout"
+
+import SEO from "../components/seo"
+
+class TabsPage extends React.Component {
+  render() {
+    let filterObj = {
+      all: { name: "All" },
+      tool: { name: "Tool" },
+      got: { name: "Game Of Thrones" },
+    }
+
+    let tabList = {
+      0: {
+        name: "Forty Six & 2",
+        cta: "free",
+        type: "Tool",
+      },
+      1: {
+        name: "Rains Of Castamere",
+        cta: "free",
+        type: "Game Of Thrones",
+      },
+      2: {
+        name: "Lateralus",
+        cta: "paid",
+        type: "Tool",
+      },
+      3: {
+        name: "Right In Two",
+        cta: "paid",
+        type: "Tool",
+      },
+      4: {
+        name: "Game Of Thrones (Main Theme)",
+        cta: "free",
+        type: "Game Of Thrones",
+      },
+      5: {
+        name: "Mhysa",
+        cta: "paid",
+        type: "Game Of Thrones",
+      },
+      6: {
+        name: "The Bear And The Maiden Fair",
+        cta: "free",
+        type: "Game Of Thrones",
+      },
+      7: {
+        name: "The Light Of The Seven",
+        cta: "paid",
+        type: "Game Of Thrones",
+      },
+      8: {
+        name: "Sober",
+        cta: "free",
+        type: "Tool",
+      },
+      9: {
+        name: "Jimmy",
+        cta: "free",
+        type: "Tool",
+      },
+    }
+    return (
+      <Layout>
+        <SEO title="Tabs" />
+        <div className="container">
+          <h1 className="title">Tabs</h1>
+          <section className="section tab-bundles">
+            <div className="container columns">
+              <BundleCard
+                name={"Free Tabs Bundle"}
+                description={"Get access to all of the available free tabs."}
+                cta={"Download"}
+                img={this.props.data.freeImage.childImageSharp.fluid}
+              />
+
+              <BundleCard
+                name={"Tool Tabs Bundle"}
+                description={"Tabs for all my TOOL covers."}
+                cta={"Buy - $14.99"}
+                img={this.props.data.herramientaImage.childImageSharp.fluid}
+              />
+              <BundleCard
+                name={"Worldbuilding"}
+                description={
+                  "Tabs for all the songs on the Worldbuilding album."
+                }
+                cta={"Buy - $20.00"}
+                img={this.props.data.wbImage.childImageSharp.fluid}
+              />
+            </div>
+          </section>
+          <SingleTabs filterTabs={filterObj} tabs={tabList} />
+        </div>
+      </Layout>
+    )
+  }
+}
+
+class BundleCard extends React.Component {
+  render() {
+    return (
+      <div className="card column is-one-third tab-bundle">
+        <div className="card-content">
+          <div className="card-image">
+            <figure className="image is-fullwidth">
+              <Img fluid={this.props.img} />
+            </figure>
+          </div>
+
+          <div className="content">
+            <h3 className="subtitle">{this.props.name}</h3>
+            <p>{this.props.description}</p>
+          </div>
+        </div>
+        <footer className="card-footer">
+          <a href="#" className="button is-primary card-footer-item">
+            {this.props.cta}
+          </a>
+        </footer>
+      </div>
+    )
+  }
+}
+
+class SingleTabs extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  state = {
+    active: "All",
+  }
+
+  handleClick(value) {
+    this.setState({ active: value })
+  }
+  render() {
+    let tabs = Object.values(this.props.filterTabs).map(val => {
+      return (
+        <li
+          className={val.name === this.state.active ? "is-active" : ""}
+          onClick={() => this.handleClick(val.name)}
+        >
+          <a>
+            <span>{val.name}</span>
+          </a>
+        </li>
+      )
+    })
+
+    let tabList = Object.values(this.props.tabs)
+    console.log(tabList)
+    tabList = tabList.sort(function(a, b) {
+      if (a.name === b.name) {
+        return 0
+      } else {
+        return a.name < b.name ? -1 : 1
+      }
+    })
+    let tabListSorted = tabList.map(val => {
+      if (this.state.active === "All") {
+        return <SingleTab name={val.name} cta={val.cta} />
+      } else if (this.state.active === val.type) {
+        return <SingleTab name={val.name} cta={val.cta} />
+      }
+    })
+
+    return (
+      <section className="section single-tabs">
+        <h2 className="subtitle is-uppercase is-bold">Single Tabs</h2>
+        <div className="tabs is-right is-boxed is-small">
+          <ul>{tabs}</ul>
+        </div>
+        {tabListSorted}
+      </section>
+    )
+  }
+}
+
+class SingleTab extends React.Component {
+  handleClick(productID) {
+    const Paddle = window.Paddle
+    Paddle.Checkout.open({ product: productID, allowQuantity: false })
+  }
+  render() {
+    if (this.props.cta === "free") {
+      return (
+        <nav className="level tool is-marginless">
+          <div className="level-left">
+            <div className="level-item">
+              <h3>{this.props.name}</h3>
+            </div>
+          </div>
+          <div className="level-right">
+            <div className="level-item">
+              <Link to="/signup" className="button is-primary">
+                <span className="icon">
+                  <MdFileDownload />
+                </span>
+                &nbsp;Free Download
+              </Link>
+            </div>
+          </div>
+        </nav>
+      )
+    } else {
+      return (
+        <nav className="level tool is-marginless">
+          <div className="level-left">
+            <div className="level-item">
+              <h3>{this.props.name}</h3>
+            </div>
+          </div>
+          <div className="level-right">
+            <div className="level-item">
+              <button
+                className="button is-primary"
+                onClick={() => this.handleClick("497120")}
+              >
+                <span className="icon">
+                  <MdShoppingCart />
+                </span>
+                &nbsp;Buy - $3.50
+              </button>
+            </div>
+          </div>
+        </nav>
+      )
+    }
+  }
+}
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        herramientaImage: file(
+          relativePath: { eq: "herramienta-bundle-2.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        wbImage: file(relativePath: { eq: "wb-bundle-2.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        freeImage: file(relativePath: { eq: "free-bundle.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => <TabsPage data={data} {...props} />}
+  />
+)
