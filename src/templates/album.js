@@ -28,8 +28,7 @@ const AlbumPage = ({ data }) => (
             <figure className="image">
               <Img
                 fluid={
-                  data.markdownRemark.frontmatter.coverImage.childImageSharp
-                    .fluid
+                  data.markdownRemark.frontmatter.cover.childImageSharp.fluid
                 }
               />
             </figure>
@@ -81,7 +80,7 @@ export const query = graphql`
         title
         spotify
         apple
-        coverImage {
+        cover {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid

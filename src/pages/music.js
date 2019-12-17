@@ -32,7 +32,7 @@ const MusicPage = ({ data }) => {
             return (
               <Album
                 title={node.frontmatter.title}
-                cover={node.frontmatter.coverImage.childImageSharp.fluid}
+                cover={node.frontmatter.cover.childImageSharp.fluid}
                 spotify={node.frontmatter.spotify}
                 apple={node.frontmatter.apple}
                 link={node.fields.slug}
@@ -47,7 +47,7 @@ const MusicPage = ({ data }) => {
             return (
               <Album
                 title={node.frontmatter.title}
-                cover={node.frontmatter.coverImage.childImageSharp.fluid}
+                cover={node.frontmatter.cover.childImageSharp.fluid}
                 spotify={node.frontmatter.spotify}
                 apple={node.frontmatter.apple}
                 link={node.fields.slug}
@@ -116,7 +116,7 @@ export const query = graphql`
             type
             spotify
             apple
-            coverImage {
+            cover {
               childImageSharp {
                 fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid

@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => (
               <figure className="image">
                 <Img
                   fluid={
-                    data.allMarkdownRemark.edges[0].node.frontmatter.coverImage
+                    data.allMarkdownRemark.edges[0].node.frontmatter.cover
                       .childImageSharp.fluid
                   }
                 />
@@ -191,7 +191,7 @@ export const query = graphql`
             type
             spotify
             apple
-            coverImage {
+            cover {
               childImageSharp {
                 fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid

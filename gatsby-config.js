@@ -27,6 +27,13 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `uploads`,
+        path: `${__dirname}/static/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -57,11 +64,17 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
+            },
+          },
+          {
+            resolve: "gatsby-remark-normalize-paths",
+            options: {
+              pathFields: ["cover"],
             },
           },
         ],
