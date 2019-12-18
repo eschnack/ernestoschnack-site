@@ -153,6 +153,14 @@ section.hero {
   margin: 0.2rem;
 }
 
+.album .image {
+  transition: 0.3s;
+}
+
+.album .image:hover {
+  transform: scale(1.03);
+}
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;

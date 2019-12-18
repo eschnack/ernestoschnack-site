@@ -37,6 +37,8 @@ const MusicPage = ({ data }) => {
                 apple={node.frontmatter.apple}
                 link={node.fields.slug}
                 key={node.id}
+                width="column is-one-quarter"
+                small=""
               />
             )
           })}
@@ -52,6 +54,8 @@ const MusicPage = ({ data }) => {
                 apple={node.frontmatter.apple}
                 link={node.fields.slug}
                 key={node.id}
+                width="column is-one-fifth"
+                small="is-small"
               />
             )
           })}
@@ -64,7 +68,7 @@ const MusicPage = ({ data }) => {
 class Album extends React.Component {
   render() {
     return (
-      <div className="column is-one-quarter">
+      <div className={this.props.width}>
         <div className="card album">
           <div className="card-image">
             <figure className="image">
@@ -83,14 +87,19 @@ class Album extends React.Component {
           </div>
           <div className="card-footer">
             <a
-              className="card-footer-item button spotify has-text-white"
+              className={
+                "card-footer-item button spotify has-text-white " +
+                this.props.small
+              }
               href={"https://open.spotify.com/album/" + this.props.spotify}
             >
               <FaSpotify />
               &nbsp;Spotify
             </a>
             <a
-              className="card-footer-item button is-light apple"
+              className={
+                "card-footer-item button is-light apple " + this.props.small
+              }
               href={"https://music.apple.com/album/" + this.props.apple}
             >
               <FaApple />
