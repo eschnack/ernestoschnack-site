@@ -30,15 +30,26 @@ const IndexPage = ({ data }) => (
           <div className="card album">
             <div className="card-image">
               <figure className="image">
-                <Img
-                  fluid={
-                    data.allMarkdownRemark.edges[0].node.frontmatter.cover
-                      .childImageSharp.fluid
-                  }
-                />
+                <AniLink
+                  cover
+                  direction="up"
+                  duration={0.5}
+                  bg="#333333"
+                  to={data.allMarkdownRemark.edges[0].node.fields.slug}
+                >
+                  <Img
+                    fluid={
+                      data.allMarkdownRemark.edges[0].node.frontmatter.cover
+                        .childImageSharp.fluid
+                    }
+                  />
+                </AniLink>
               </figure>
             </div>
             <div className="card-content">
+              <p className="is-uppercase is-size-7 has-text-weight-bold">
+                Latest Release:
+              </p>
               <h2 class="subtitle">
                 {data.allMarkdownRemark.edges[0].node.frontmatter.title}
               </h2>

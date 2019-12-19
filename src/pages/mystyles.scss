@@ -336,6 +336,10 @@ section.hero {
     padding: 20px;
     opacity: 1;
   }
+
+  .navbar-brand .navbar-item {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -347,6 +351,19 @@ section.hero {
   }
 }
 
+@media (max-width: 768px) {
+  .footer .level-right {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 452px) {
+  .navbar-brand .navbar-item {
+    font-size: 24px;
+  }
+}
 /* MAILERLITE CSS */
 
 .ml-form-embedSubmitLoad {
