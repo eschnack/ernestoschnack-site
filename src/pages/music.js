@@ -24,7 +24,7 @@ const MusicPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Music" />
-      <div className="container">
+      <div className="container music">
         <h1 className="title">Music</h1>
         <h2 className="subtitle is-uppercase">Albums</h2>
         <div className="columns is-multiline">
