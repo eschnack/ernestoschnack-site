@@ -88,15 +88,42 @@ const AboutPage = ({ data }) => (
         <div className="content">
           <h2 className="subtitle">Photos</h2>
           <div className="columns is-multiline is-flex-mobile">
-            <PressPhoto thumb={data.thumb1.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb2.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb3.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb4.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb5.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb6.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb7.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb8.childImageSharp.fluid} />
-            <PressPhoto thumb={data.thumb9.childImageSharp.fluid} />
+            <PressPhoto
+              thumb={data.thumb1.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/123fij8eh3lb9ai/ernesto_schnack-02.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb2.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/ad130wymyih12w3/ernesto_schnack-01.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb3.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/keknpesygowrlty/ernesto-schnack-03.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb4.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/uckw1jr0n99wpbt/ernesto-schnack-04.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb5.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/hbbt7ytedipi6lg/ernesto-schnack-05.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb6.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/immpyh4isc0kc0g/ernesto-schnack-06.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb7.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/6ba5lnhwe4rk826/ernesto-schnack-07.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb8.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/fzc7g3qmjdz4x0c/ernesto-schnack-08.jpg?dl=1"
+            />
+            <PressPhoto
+              thumb={data.thumb9.childImageSharp.fluid}
+              link="https://www.dropbox.com/s/jkwhxsodl1qnh89/ernesto-schnack-09.jpg?dl=1"
+            />
           </div>
         </div>
       </section>
@@ -109,7 +136,7 @@ class PressPhoto extends React.Component {
     return (
       <div className="column is-2 is-one-third-tablet is-half-mobile">
         <figure className="image is-marginless">
-          <a href="#">
+          <a href={this.props.link}>
             <Img fluid={this.props.thumb} />
           </a>
         </figure>
