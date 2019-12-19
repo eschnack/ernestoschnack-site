@@ -13,7 +13,7 @@ const AboutPage = ({ data }) => (
     <SEO title="About" />
     <div className="container">
       <h1 className="title">About</h1>
-      <section class="bio">
+      <section className="bio">
         <div className="content">
           <figure className="image">
             <Img fluid={data.bioImage.childImageSharp.fluid} />
@@ -54,7 +54,7 @@ const AboutPage = ({ data }) => (
         </div>
       </section>
       <section>
-        <nav class="level social-box">
+        <nav className="level social-box">
           <a
             href={data.site.siteMetadata.facebookURL}
             className="level-item has-text-centered facebook has-text-white"
@@ -84,10 +84,10 @@ const AboutPage = ({ data }) => (
           </a>
         </nav>
       </section>
-      <section class="pics">
+      <section className="pics">
         <div className="content">
-          <h2 class="subtitle">Photos</h2>
-          <div className="columns is-multiline">
+          <h2 className="subtitle">Photos</h2>
+          <div className="columns is-multiline is-flex-mobile">
             <PressPhoto thumb={data.thumb1.childImageSharp.fluid} />
             <PressPhoto thumb={data.thumb2.childImageSharp.fluid} />
             <PressPhoto thumb={data.thumb3.childImageSharp.fluid} />

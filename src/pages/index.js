@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => (
               <p className="is-uppercase is-size-7 has-text-weight-bold">
                 Latest Release:
               </p>
-              <h2 class="subtitle">
+              <h2 className="subtitle">
                 {data.allMarkdownRemark.edges[0].node.frontmatter.title}
               </h2>
             </div>

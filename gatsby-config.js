@@ -39,12 +39,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Ernesto Schnack`,
+        short_name: `Ernesto Schnack`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#ffffff`,
+        theme_color: `#2c84de`,
+        display: `fullscreen`,
         icon: `src/images/es_logo.png`, // This path is relative to the root of the site.
       },
     },
