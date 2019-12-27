@@ -14,60 +14,13 @@ class TabsPage extends React.Component {
       all: { name: "All" },
       tool: { name: "Tool" },
       got: { name: "Game Of Thrones" },
+      og: { name: "Original" },
+      other: { name: "Other" },
+      free: { name: "Free" },
     }
 
-    let tabList = {
-      0: {
-        name: "Forty Six & 2",
-        cta: "free",
-        type: "Tool",
-      },
-      1: {
-        name: "Rains Of Castamere",
-        cta: "free",
-        type: "Game Of Thrones",
-      },
-      2: {
-        name: "Lateralus",
-        cta: "paid",
-        type: "Tool",
-      },
-      3: {
-        name: "Right In Two",
-        cta: "paid",
-        type: "Tool",
-      },
-      4: {
-        name: "Game Of Thrones (Main Theme)",
-        cta: "free",
-        type: "Game Of Thrones",
-      },
-      5: {
-        name: "Mhysa",
-        cta: "paid",
-        type: "Game Of Thrones",
-      },
-      6: {
-        name: "The Bear And The Maiden Fair",
-        cta: "free",
-        type: "Game Of Thrones",
-      },
-      7: {
-        name: "The Light Of The Seven",
-        cta: "paid",
-        type: "Game Of Thrones",
-      },
-      8: {
-        name: "Sober",
-        cta: "free",
-        type: "Tool",
-      },
-      9: {
-        name: "Jimmy",
-        cta: "free",
-        type: "Tool",
-      },
-    }
+    let tabList = this.props.data.allMarkdownRemark.edges
+
     return (
       <Layout>
         <SEO title="Tabs" />
@@ -78,8 +31,9 @@ class TabsPage extends React.Component {
               <BundleCard
                 name={"Free Tabs Bundle"}
                 description={"Get access to all of the available free tabs."}
-                cta={"Download"}
+                cta={"Free Download"}
                 img={this.props.data.freeImage.childImageSharp.fluid}
+                pid={"free"}
               />
 
               <BundleCard
@@ -87,14 +41,16 @@ class TabsPage extends React.Component {
                 description={"Tabs for all my TOOL covers."}
                 cta={"Buy - $14.99"}
                 img={this.props.data.herramientaImage.childImageSharp.fluid}
+                pid={"579346"}
               />
               <BundleCard
                 name={"Worldbuilding"}
                 description={
                   "Tabs for all the songs on the Worldbuilding album."
                 }
-                cta={"Buy - $20.00"}
+                cta={"Buy - $21.00"}
                 img={this.props.data.wbImage.childImageSharp.fluid}
+                pid={"579343"}
               />
             </div>
           </section>
@@ -106,28 +62,65 @@ class TabsPage extends React.Component {
 }
 
 class BundleCard extends React.Component {
+  handleClick(productID) {
+    const Paddle = window.Paddle
+    Paddle.Checkout.open({ product: productID, allowQuantity: false })
+  }
   render() {
-    return (
-      <div className="card column is-one-third tab-bundle">
-        <div className="card-content">
-          <div className="card-image">
-            <figure className="image is-fullwidth">
-              <Img fluid={this.props.img} />
-            </figure>
-          </div>
+    if (this.props.pid === "free") {
+      return (
+        <div className="card column is-one-third tab-bundle">
+          <div className="card-content">
+            <div className="card-image">
+              <figure className="image is-fullwidth">
+                <Img fluid={this.props.img} />
+              </figure>
+            </div>
 
-          <div className="content">
-            <h3 className="subtitle">{this.props.name}</h3>
-            <p>{this.props.description}</p>
+            <div className="content">
+              <h3 className="subtitle">{this.props.name}</h3>
+              <p>{this.props.description}</p>
+            </div>
           </div>
+          <footer className="card-footer">
+            <Link to="/signup" className="button is-primary card-footer-item">
+              <span className="icon">
+                <MdFileDownload />
+              </span>
+              &nbsp; {this.props.cta}
+            </Link>
+          </footer>
         </div>
-        <footer className="card-footer">
-          <a href="#" className="button is-primary card-footer-item">
-            {this.props.cta}
-          </a>
-        </footer>
-      </div>
-    )
+      )
+    } else {
+      return (
+        <div className="card column is-one-third tab-bundle">
+          <div className="card-content">
+            <div className="card-image">
+              <figure className="image is-fullwidth">
+                <Img fluid={this.props.img} />
+              </figure>
+            </div>
+
+            <div className="content">
+              <h3 className="subtitle">{this.props.name}</h3>
+              <p>{this.props.description}</p>
+            </div>
+          </div>
+          <footer className="card-footer">
+            <button
+              className="button is-primary card-footer-item"
+              onClick={() => this.handleClick(this.props.pid)}
+            >
+              <span className="icon">
+                <MdShoppingCart />
+              </span>
+              &nbsp;{this.props.cta}
+            </button>
+          </footer>
+        </div>
+      )
+    }
   }
 }
 
@@ -148,6 +141,7 @@ class SingleTabs extends React.Component {
         <li
           className={val.name === this.state.active ? "is-active" : ""}
           onClick={() => this.handleClick(val.name)}
+          key={val.name}
         >
           <a>
             <span>{val.name}</span>
@@ -156,20 +150,26 @@ class SingleTabs extends React.Component {
       )
     })
 
-    let tabList = Object.values(this.props.tabs)
+    let tabList = this.props.tabs
     console.log(tabList)
-    tabList = tabList.sort(function(a, b) {
-      if (a.name === b.name) {
-        return 0
-      } else {
-        return a.name < b.name ? -1 : 1
-      }
-    })
+
     let tabListSorted = tabList.map(val => {
       if (this.state.active === "All") {
-        return <SingleTab name={val.name} cta={val.cta} />
-      } else if (this.state.active === val.type) {
-        return <SingleTab name={val.name} cta={val.cta} />
+        return (
+          <SingleTab
+            name={val.node.frontmatter.title}
+            cta={val.node.frontmatter.cta}
+            key={val.node.id}
+          />
+        )
+      } else if (this.state.active === val.node.frontmatter.type) {
+        return (
+          <SingleTab
+            name={val.node.frontmatter.title}
+            cta={val.node.frontmatter.cta}
+            key={val.node.id}
+          />
+        )
       }
     })
 
@@ -223,7 +223,7 @@ class SingleTab extends React.Component {
             <div className="level-item">
               <button
                 className="button is-primary"
-                onClick={() => this.handleClick("497120")}
+                onClick={() => this.handleClick(this.props.cta)}
               >
                 <span className="icon">
                   <MdShoppingCart />
@@ -262,6 +262,25 @@ export default props => (
           childImageSharp {
             fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        allMarkdownRemark(
+          filter: { fields: { slug: { regex: "/tabs/" } } }
+          sort: { fields: [frontmatter___title], order: ASC }
+        ) {
+          totalCount
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                cta
+                type
+              }
+              fields {
+                slug
+              }
             }
           }
         }

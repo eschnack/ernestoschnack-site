@@ -20,36 +20,42 @@ const AboutPage = ({ data }) => (
           </figure>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            placerat, elit vel suscipit tincidunt, magna massa vulputate ligula,
-            non elementum ipsum lacus et diam. Suspendisse dapibus finibus odio,
-            quis vestibulum elit iaculis ut. Quisque posuere porta augue quis
-            facilisis. Phasellus faucibus metus mi, non volutpat metus laoreet
-            euismod. Etiam mattis arcu ac dolor suscipit luctus sed id tortor.
-            Ut nunc lorem, facilisis ac tempus eget, fringilla eget turpis.
-            Maecenas dictum euismod sapien, sed condimentum lorem gravida a. Nam
-            nisi arcu, fermentum eget erat eget, tempus auctor mauris. Ut id
-            gravida nisl. Etiam sed pellentesque dui. Sed lectus justo, varius
-            eget sem vel, scelerisque dignissim diam. In dapibus metus ac enim
-            fermentum euismod. Fusce eros diam, dictum eget magna egestas,
-            suscipit euismod eros. Fusce viverra non magna ut dictum. Quisque
-            euismod vulputate nulla sed bibendum. Suspendisse potenti.
+            Combine the hauntingly beautiful sounds and guitar-work of Michael
+            Hedges with Tool’s dark polyrhythms, and you start to get an idea of
+            where Ernesto Schnack is coming from. His music is a blend of
+            bittersweet melodies, polyethnic grooves and metal-influenced
+            intensity, all channeled through one acoustic guitar.
           </p>
           <p>
-            Sed non massa a odio sagittis porta. Mauris tincidunt leo orci,
-            dapibus sagittis neque ullamcorper eget. Quisque gravida, ex et
-            sagittis dapibus, ligula neque elementum lectus, eu viverra nulla
-            arcu sed neque. Sed convallis facilisis lectus, ut venenatis arcu
-            faucibus nec. Interdum et malesuada fames ac ante ipsum primis in
-            faucibus. Pellentesque sed leo vehicula ante iaculis rhoncus. Aenean
-            vel ligula at ipsum luctus tempor nec et magna. Pellentesque
-            accumsan metus non eleifend finibus. Vestibulum fermentum at nulla
-            in facilisis. In elementum elit urna, ac auctor mauris rutrum
-            ornare. Morbi tincidunt ligula ex, sit amet dictum leo pulvinar ut.
-            Suspendisse dapibus dolor eu nisl tincidunt, eget rutrum quam
-            rhoncus. Integer nec leo vitae metus imperdiet egestas quis vitae
-            mi. Quisque in tortor consectetur, rutrum odio quis, ornare velit.
-            Nam quis accumsan tortor. Duis eu aliquet ligula.
+            Hailing originally from Panama, Ernesto has spent his last few years
+            developing his unique musical voice while living in Berlin. His
+            goal: to meld his love for metal and his composition studies at
+            Berklee College of Music with his passion for the acoustic guitar.
+            Released in 2011, his album A Work in Progress was the first step in
+            that direction.
+          </p>
+          <p>
+            His arrangements of other songs, like “Forty-Six &amp; 2” by Tool
+            and the theme from the TV show Game of Thrones, also helped Ernesto
+            hone his new sound, while also finding him a dedicated audience
+            online through YouTube. His technically demanding yet moving
+            renditions have been attracting and inspiring guitar fans from all
+            over the world.
+          </p>
+          <p>
+            Which all leads to his new album Worldbuilding. Inspired by the
+            imagery found in epic fantasy novels and comics, Worldbuilding is
+            filled with melancholy melodies and ambient textures that grow into
+            a full-on metal assault when you least expect it. The album closer,
+            a cover of Tool’s “Right in Two,” perfectly encapsulates how Ernesto
+            balances delicate fingerpicking with moments of raw aggression not
+            often found in acoustic guitar music.
+          </p>
+          <p>
+            2014 should be a promising year for Ernesto. He’ll continue to
+            promote his new album while simultaneously releasing more new music,
+            both original songs and covers. His hope is to build on his new
+            sound and take it in new directions.
           </p>
         </div>
       </section>
