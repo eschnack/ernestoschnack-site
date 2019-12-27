@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fields: { slug: { regex: "/music/" } } }) {
         edges {
           node {
             fields {

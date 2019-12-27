@@ -189,6 +189,7 @@ export const query = graphql`
       }
     }
     allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/music/" } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 1
     ) {
