@@ -162,6 +162,17 @@ class SingleTabs extends React.Component {
             key={val.node.id}
           />
         )
+      } else if (
+        this.state.active === "Free" &&
+        val.node.frontmatter.cta === "free"
+      ) {
+        return (
+          <SingleTab
+            name={val.node.frontmatter.title}
+            cta={val.node.frontmatter.cta}
+            key={val.node.id}
+          />
+        )
       } else if (this.state.active === val.node.frontmatter.type) {
         return (
           <SingleTab

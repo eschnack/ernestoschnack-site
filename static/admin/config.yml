@@ -22,4 +22,4 @@ collections:
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "cta", label: "CTA", widget: "string" }
-      - { name: "type", label: "Type", widget: "select" , options: ["All", "Tool","Game Of Thrones", "Original", "Other", "Free"] }
+      - { name: "type", label: "Type", widget: "select" , options: ["All", "Tool","Game Of Thrones", "Original", "Other"] }
