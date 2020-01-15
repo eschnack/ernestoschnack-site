@@ -32,7 +32,12 @@ const Contact = () => (
               <div class="field-body">
                 <div class="field">
                   <p class="control is-expanded has-icons-left">
-                    <input class="input" type="text" placeholder="Name" />
+                    <input
+                      class="input"
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                    />
                     <span class="icon is-small is-left">
                       <FaUser />
                     </span>
@@ -43,6 +48,7 @@ const Contact = () => (
                     <input
                       class="input is-success"
                       type="email"
+                      name="email"
                       placeholder="Email"
                     />
                     <span class="icon is-small is-left">
@@ -63,7 +69,7 @@ const Contact = () => (
               <div class="field-body">
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea"></textarea>
+                    <textarea class="textarea" name="message"></textarea>
                   </div>
                 </div>
               </div>
