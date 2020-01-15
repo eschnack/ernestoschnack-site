@@ -24,6 +24,7 @@ const Contact = () => (
       <section className="contact-form">
         <div className="box">
           <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">From</label>
