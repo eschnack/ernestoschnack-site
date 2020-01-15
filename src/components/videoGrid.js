@@ -7,7 +7,7 @@ class VideoGrid extends React.Component {
     let videos = youtubeArray.map(val => {
       return <VideoModal key={val.node.videoId} videoData={val} />
     })
-    return <div className="columns is-multiline">{videos}</div>
+    return <div className="columns is-multiline video-grid">{videos}</div>
   }
 }
 
