@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, lang, meta, title, image }) {
+  const data = useStaticQuery(
     graphql`
       query {
         site {
@@ -21,19 +21,37 @@ function SEO({ description, lang, meta, title }) {
             author
           }
         }
+        allImageSharp(
+          filter: { sizes: { originalName: { eq: "ernesto-schnack-03.jpg" } } }
+        ) {
+          edges {
+            node {
+              original {
+                width
+                height
+                src
+              }
+              sizes {
+                originalName
+                src
+              }
+            }
+          }
+        }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-
+  const metaDescription = description || data.site.siteMetadata.description
+  const metaImage = image || data.allImageSharp.edges[0].node.sizes.src
+  console.log(metaImage)
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -41,11 +59,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: title + " | Ernesto Schnack",
         },
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
         },
         {
           property: `og:type`,
@@ -57,11 +79,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: data.site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: title + " | Ernesto Schnack",
         },
         {
           name: `twitter:description`,

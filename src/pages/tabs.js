@@ -125,9 +125,6 @@ class BundleCard extends React.Component {
 }
 
 class SingleTabs extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   state = {
     active: "All",
   }

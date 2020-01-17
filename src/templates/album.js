@@ -10,7 +10,10 @@ import SEO from "../components/seo"
 
 const AlbumPage = ({ data }) => (
   <Layout>
-    <SEO title="data.markdownRemark.frontmatter.title" />
+    <SEO
+      title={data.markdownRemark.frontmatter.title}
+      image={data.markdownRemark.frontmatter.cover.publicURL}
+    />
     <div className="container">
       <div className="album-detail">
         <h1 className="title">
@@ -81,6 +84,7 @@ export const query = graphql`
         spotify
         apple
         cover {
+          publicURL
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid

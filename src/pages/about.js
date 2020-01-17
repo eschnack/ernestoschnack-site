@@ -20,7 +20,7 @@ const AboutPage = ({ data }) => (
           <figure className="image">
             <Img fluid={data.bioImage.childImageSharp.fluid} />
           </figure>
-
+          <h2>Bio</h2>
           <p>
             Ernesto Schnack is a Panamanian guitarist, composer and producer.
             Known for his acoustic covers and original compositions, Ernesto has
