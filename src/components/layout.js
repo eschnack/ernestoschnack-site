@@ -36,6 +36,8 @@ const Layout = ({ children }) => {
     }
   `)
 
+  let dt = new Date()
+  let year = dt.getFullYear()
   return (
     <div>
       <header>
@@ -47,7 +49,7 @@ const Layout = ({ children }) => {
           <nav className="level">
             <div className="level-left">
               <div className="level-item">
-                ©2019 Ernesto Schnack. All Rights Reserved.
+                ©{year} Ernesto Schnack. All Rights Reserved.
               </div>
             </div>
             <div className="level-right">
