@@ -13,11 +13,11 @@ const VideosPage = ({ data }) => (
     <SEO title="Videos" />
     <div className="container">
       <h1 className="title">Videos</h1>
-      <VideoGrid youtubeData={data.allYoutubeVideo} />
+      <VideoGrid limit="52" />
     </div>
   </Layout>
 )
-
+/*
 export const query = graphql`
   query {
     allYoutubeVideo(
@@ -62,5 +62,5 @@ export const query = graphql`
     }
   }
 `
-
+*/
 export default VideosPage

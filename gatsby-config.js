@@ -53,7 +53,7 @@ module.exports = {
       options: {
         channelId: ["UCz1PeIEiNkKRwWDKFA6RkzQ"],
         apiKey: "AIzaSyC-hY_CXgHdu8Nz-ffG2sg8lzWHWqGCBVE",
-        maxVideos: 52, // Defaults to 50
+        maxVideos: 100, // Defaults to 50
       },
     },
 

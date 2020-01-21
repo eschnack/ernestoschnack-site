@@ -110,7 +110,7 @@ const IndexPage = ({ data }) => (
         <h2 className="subtitle has-text-centered is-uppercase has-text-weight-semibold">
           Latest Videos
         </h2>
-        <VideoGrid youtubeData={data.allYoutubeVideo} />
+        <VideoGrid limit="8" />
         <AniLink
           cover
           direction="up"
