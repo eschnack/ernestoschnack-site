@@ -52,6 +52,7 @@ function SEO({ description, lang, meta, title, image, follow }) {
       }}
       title={title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+      bodyAttributes={{ class: title }}
       meta={[
         {
           name: `description`,
