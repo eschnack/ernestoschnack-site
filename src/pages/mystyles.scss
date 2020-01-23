@@ -14,19 +14,10 @@ body {
   background-color: $background;
 }
 
-html,
-body,
-#___gatsby,
-#gatsby-focus-wrapper,
-.tl-edges,
-.tl-wrapper {
-  height: 100%;
-}
-
 .tl-wrapper > div {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .wrapper {
