@@ -9,7 +9,7 @@ import { IoMdArrowDropleftCircle } from "react-icons/io"
 
 const FreeTabs = () => (
   <Layout>
-    <SEO title="Contact" follow="none" />
+    <SEO title="Free Tabs" follow="none" />
     <div className="container success">
       <h1 className="title">Thanks for signing up!</h1>
       <section>

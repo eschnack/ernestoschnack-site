@@ -103,7 +103,7 @@ class Album extends React.Component {
               href={"https://music.apple.com/album/" + this.props.apple}
             >
               <FaApple />
-              &nbsp;Apple Music
+              &nbsp;Apple
             </a>
           </div>
         </div>

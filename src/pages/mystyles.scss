@@ -156,6 +156,7 @@ section.hero {
 
 .album .card-footer {
   border: none;
+  flex-wrap: wrap;
 }
 
 .album .card-footer-item:not(:last-child) {
@@ -443,6 +444,7 @@ section.hero {
     width: 50%;
   }
 }
+
 /* MAILERLITE CSS */
 
 .ml-form-embedSubmitLoad {
