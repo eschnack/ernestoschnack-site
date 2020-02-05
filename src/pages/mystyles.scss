@@ -100,11 +100,6 @@ body {
 .footer a:hover {
   color: darken(#fff, 10%);
 }
-section.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../images/bg2.jpg) no-repeat top center;
-  background-size: cover;
-}
 
 .hero-foot .tabs ul {
   justify-content: flex-end;
@@ -442,6 +437,32 @@ section.hero {
 @media (max-width: 350px) {
   .single-tabs .tabs li {
     width: 50%;
+  }
+}
+
+@media (min-width: 501px) {
+  section.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/bg2.jpg) no-repeat top center;
+    background-size: cover;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 500px),
+  (min-resolution: 144dpi) and (max-width: 500px) {
+  section.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/bg-mobile-hi.jpg) no-repeat top center;
+    background-size: cover;
+  }
+}
+
+@media (-webkit-max-device-pixel-ratio: 1.5) and (max-width: 500px),
+  (max-resolution: 144dpi) and (max-width: 500px) {
+  section.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../images/bg-mobile.jpg) no-repeat top center;
+    background-size: cover;
   }
 }
 
