@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => {
                   }
                 >
                   <FaSpotify />
-                  &nbsp;Pre-save on Spotify
+                  &nbsp;Spotify
                 </a>
 
                 <a
