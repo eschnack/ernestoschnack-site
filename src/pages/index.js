@@ -33,7 +33,6 @@ const IndexPage = ({ data }) => {
             <div className="card album">
               <div className="card-image">
                 <figure className="image">
-                  {/*
                   <AniLink
                     cover
                     direction="up"
@@ -47,43 +46,30 @@ const IndexPage = ({ data }) => {
                           .childImageSharp.fluid
                       }
                     />
-                    </AniLink> */}
-                  <a href="https://show.co/UvhSMPF">
-                    <Img fluid={data.herramientaImage.childImageSharp.fluid} />
-                  </a>
+                  </AniLink>
                 </figure>
               </div>
               <div className="card-content">
                 <p className="is-uppercase is-size-7 has-text-weight-bold">
-                  New Single Out March 27!
+                  Latest Release:
                 </p>
                 <h2 className="subtitle">
-                  {/* {data.allMarkdownRemark.edges[0].node.frontmatter.title} */}
-                  Invincible
+                  {data.allMarkdownRemark.edges[0].node.frontmatter.title}
                 </h2>
               </div>
               <div className="card-footer">
-                {/*<a
-                  className="card-footer-item button spotify has-text-white"
-                 
-                 href={
-                    "https://open.spotify.com/album/" +
-                    data.allMarkdownRemark.edges[0].node.frontmatter.spotify
-                  } 
-                  
-                >
-                  <FaSpotify />
-                  &nbsp;Pre-save on Spotify
-                </a> */}
-
                 <a
                   className="card-footer-item button spotify has-text-white"
-                  href="https://show.co/UvhSMPF"
+                  href={
+                    "https://open.spotify.com/album/" +
+                    data.allMarkdownRemark.edges[0].node.frontmatter.spotify
+                  }
                 >
                   <FaSpotify />
                   &nbsp;Pre-save on Spotify
                 </a>
-                {/* <a
+
+                <a
                   className="card-footer-item button is-light apple"
                   href={
                     "https://music.apple.com/album/" +
@@ -92,7 +78,7 @@ const IndexPage = ({ data }) => {
                 >
                   <FaApple />
                   &nbsp;Apple Music
-                </a> */}
+                </a>
               </div>
             </div>
           </div>
