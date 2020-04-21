@@ -37,6 +37,11 @@ const FreeTabs = () => (
                 </a>
               </li>
               <li>
+                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/jimmy-Ernesto_Schnack.zip">
+                  jimmy
+                </a>
+              </li>
+              <li>
                 <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Judith-Ernesto_Schnack.zip">
                   Judith
                 </a>
