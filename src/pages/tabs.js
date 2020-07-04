@@ -41,7 +41,7 @@ class TabsPage extends React.Component {
                 description={"Tabs for all my TOOL covers."}
                 cta={"Buy - $14.99"}
                 img={this.props.data.herramientaImage.childImageSharp.fluid}
-                pid={"579346"}
+                pid={"599608"}
               />
               <BundleCard
                 name={"Worldbuilding"}
