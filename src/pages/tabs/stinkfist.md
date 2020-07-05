@@ -1,6 +1,6 @@
 ---
 title: Stinkfist
-cta: '579338'
+cta: 'FyzGV'
 type: Tool
 ---
 

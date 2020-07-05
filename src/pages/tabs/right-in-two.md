@@ -1,6 +1,6 @@
 ---
 title: Right In Two
-cta: "496904"
+cta: "free"
 type: Tool
 ---
 

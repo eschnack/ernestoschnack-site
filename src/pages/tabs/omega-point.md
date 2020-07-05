@@ -1,6 +1,6 @@
 ---
 title: Omega Point
-cta: '497064'
+cta: 'QyVNo'
 type: Original
 ---
 

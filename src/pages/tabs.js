@@ -41,7 +41,7 @@ class TabsPage extends React.Component {
                 description={"Tabs for all my TOOL covers."}
                 cta={"Buy - $14.99"}
                 img={this.props.data.herramientaImage.childImageSharp.fluid}
-                pid={"599608"}
+                pid={"bMHQ"}
               />
               <BundleCard
                 name={"Worldbuilding"}
@@ -50,7 +50,7 @@ class TabsPage extends React.Component {
                 }
                 cta={"Buy - $21.00"}
                 img={this.props.data.wbImage.childImageSharp.fluid}
-                pid={"579343"}
+                pid={"WXUT"}
               />
             </div>
           </section>
@@ -62,10 +62,7 @@ class TabsPage extends React.Component {
 }
 
 class BundleCard extends React.Component {
-  handleClick(productID) {
-    const Paddle = window.Paddle
-    Paddle.Checkout.open({ product: productID, allowQuantity: false })
-  }
+
   render() {
     if (this.props.pid === "free") {
       return (
@@ -108,15 +105,16 @@ class BundleCard extends React.Component {
             </div>
           </div>
           <footer className="card-footer">
-            <button
+            
+            <a
               className="button is-primary card-footer-item"
-              onClick={() => this.handleClick(this.props.pid)}
+              href={"https://gum.co/" + this.props.pid}
             >
               <span className="icon">
                 <MdShoppingCart />
               </span>
               &nbsp;{this.props.cta}
-            </button>
+            </a>
           </footer>
         </div>
       )
@@ -194,10 +192,7 @@ class SingleTabs extends React.Component {
 }
 
 class SingleTab extends React.Component {
-  handleClick(productID) {
-    const Paddle = window.Paddle
-    Paddle.Checkout.open({ product: productID, allowQuantity: false })
-  }
+ 
   render() {
     if (this.props.cta === "free") {
       return (
@@ -229,15 +224,15 @@ class SingleTab extends React.Component {
           </div>
           <div className="level-right">
             <div className="level-item">
-              <button
+              <a
                 className="button is-primary"
-                onClick={() => this.handleClick(this.props.cta)}
+                href={"https://gum.co/" + this.props.cta}
               >
                 <span className="icon">
                   <MdShoppingCart />
                 </span>
                 &nbsp;Buy - $3.50
-              </button>
+              </a>
             </div>
           </div>
         </nav>

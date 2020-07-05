@@ -28,14 +28,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-    Paddle.Setup({ vendor: 8449 });
-        `,
-          }}
-        />
+        <script src="https://gumroad.com/js/gumroad.js"></script>
       </body>
     </html>
   )
