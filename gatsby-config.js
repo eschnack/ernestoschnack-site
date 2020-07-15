@@ -23,6 +23,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '1397536553777691',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
