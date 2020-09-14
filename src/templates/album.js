@@ -2,7 +2,7 @@ import React from "react"
 import "../pages/mystyles.scss"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
-import { FaSpotify, FaApple, FaAngleLeft } from "react-icons/fa"
+import { FaSpotify, FaApple, FaAngleLeft, FaBandcamp } from "react-icons/fa"
 
 import Layout from "../components/layout"
 
@@ -37,6 +37,7 @@ const AlbumPage = ({ data }) => (
             </figure>
           </div>
           <div className="content column is-one-third">
+            <BuyButton buyLink={data.markdownRemark.frontmatter.buy} />
             <iframe
               className="spotify-player"
               src={
@@ -75,12 +76,31 @@ const AlbumPage = ({ data }) => (
   </Layout>
 )
 
+class BuyButton extends React.Component {
+  render() {
+    if (this.props.buyLink) {
+      return (
+        <a
+          className={"button is-primary is-fullwidth"}
+          href={this.props.buyLink}
+        >
+          <FaBandcamp />
+          &nbsp;Buy on Bandcamp
+        </a>
+      )
+    } else {
+      return null
+    }
+  }
+}
+
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
+        buy
         spotify
         apple
         cover {

@@ -22,6 +22,10 @@ export default props => (
           filter: {
             videoId: {
               in: [
+                "m6v7A6cYS7M"
+                "Q-MVwosff80"
+                "TXUH8Zf1Zvw"
+                "yaeanoe_TU8"
                 "A2n2IpD00nA"
                 "E-C1aGEVBng"
                 "iTjcXxPmZG0"

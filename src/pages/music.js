@@ -3,7 +3,13 @@ import "./mystyles.scss"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { FaSpotify, FaApple } from "react-icons/fa"
+import {
+  FaSpotify,
+  FaApple,
+  FaAngleDown,
+  FaBandcamp,
+  FaVolumeDown,
+} from "react-icons/fa"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,6 +41,7 @@ const MusicPage = ({ data }) => {
                 cover={node.frontmatter.cover.childImageSharp.fluid}
                 spotify={node.frontmatter.spotify}
                 apple={node.frontmatter.apple}
+                buy={node.frontmatter.buy}
                 link={node.fields.slug}
                 key={node.id}
                 width="column is-one-quarter"
@@ -54,6 +61,7 @@ const MusicPage = ({ data }) => {
                 apple={node.frontmatter.apple}
                 link={node.fields.slug}
                 key={node.id}
+                buy={node.frontmatter.buy}
                 width="column is-one-fifth"
                 small="is-small"
               />
@@ -67,6 +75,12 @@ const MusicPage = ({ data }) => {
 
 class Album extends React.Component {
   render() {
+    let buyButton
+    if (this.props.buy) {
+      buyButton = <BuyButton buyLink={this.props.buy} />
+    } else {
+      buyButton = ""
+    }
     return (
       <div className={this.props.width}>
         <div className="card album">
@@ -84,30 +98,53 @@ class Album extends React.Component {
           </div>
           <div className="card-content">
             <h2 className="subtitle">{this.props.title}</h2>
-          </div>
-          <div className="card-footer">
-            <a
-              className={
-                "card-footer-item button spotify has-text-white " +
-                this.props.small
-              }
-              href={"https://open.spotify.com/album/" + this.props.spotify}
-            >
-              <FaSpotify />
-              &nbsp;Spotify
-            </a>
-            <a
-              className={
-                "card-footer-item button is-light apple " + this.props.small
-              }
-              href={"https://music.apple.com/album/" + this.props.apple}
-            >
-              <FaApple />
-              &nbsp;Apple
-            </a>
+            {buyButton}
+
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button
+                  class="button is-fullwidth is-light"
+                  aria-haspopup="true"
+                  aria-controls="dropdown-menu"
+                >
+                  <FaVolumeDown /> Listen <FaAngleDown />
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a
+                    href={
+                      "https://open.spotify.com/album/" + this.props.spotify
+                    }
+                    class="dropdown-item"
+                  >
+                    <FaSpotify />
+                    &nbsp;Spotify
+                  </a>
+                  <a
+                    href={"https://music.apple.com/album/" + this.props.apple}
+                    class="dropdown-item"
+                  >
+                    <FaApple />
+                    &nbsp;Apple
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    )
+  }
+}
+
+class BuyButton extends React.Component {
+  render() {
+    return (
+      <a className={"button is-primary is-fullwidth"} href={this.props.buyLink}>
+        <FaBandcamp />
+        &nbsp;Buy on Bandcamp
+      </a>
     )
   }
 }
@@ -126,6 +163,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             type
+            buy
             spotify
             apple
             cover {

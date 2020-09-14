@@ -28,6 +28,18 @@ body {
   flex-shrink: 0;
 }
 
+.music .button {
+  transition: 0.3s;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.22);
+  font-size: 14px;
+  padding: 0.75rem;
+  height: auto;
+}
+
+.album .button.is-primary {
+  margin-bottom: 10px;
+}
+
 .button.is-primary {
   transition: 0.3s;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.22);
@@ -147,6 +159,11 @@ body {
 
 .album.card {
   max-width: 400px;
+  height: 100%;
+}
+
+.album .dropdown-menu {
+  width: 100%;
 }
 
 .album .card-footer {
@@ -329,6 +346,11 @@ body {
 
 .Home .tl-wrapper {
   height: auto;
+}
+
+.music .dropdown,
+.music .dropdown-trigger {
+  width: 100%;
 }
 
 @media (max-width: 1023px) {
@@ -1060,6 +1082,6 @@ body {
 }
 
 .gumroad-scroll-container {
-  padding-bottom: 5px!important;
-  box-sizing: content-box!important;
+  padding-bottom: 5px !important;
+  box-sizing: content-box !important;
 }
