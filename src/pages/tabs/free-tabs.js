@@ -81,6 +81,11 @@ const FreeTabs = () => (
           <div className="box free-tabs">
             <h3>Others</h3>
             <ul>
+            <li>
+                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Aerials-Ernesto_Schnack.zip">
+                  Aerials
+                </a>
+              </li>
               <li>
                 <a href="https://f002.backblazeb2.com/file/eschnack-downloads/The_Savage_Myth.zip">
                   The Savage Myth
