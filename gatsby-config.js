@@ -59,7 +59,7 @@ module.exports = {
       resolve: `gatsby-source-youtube-v2`,
       options: {
         channelId: ["UCz1PeIEiNkKRwWDKFA6RkzQ"],
-        apiKey: "AIzaSyC-hY_CXgHdu8Nz-ffG2sg8lzWHWqGCBVE",
+        apiKey: "AIzaSyDjL_HBb28QB8Jl___MWijrvudMdaD_V_s",
         maxVideos: 100, // Defaults to 50
       },
     },
@@ -88,16 +88,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Lexend Deca`,
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         // your google analytics tracking id
@@ -106,6 +96,19 @@ module.exports = {
         head: false,
         // enable ip anonymization
         anonymize: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Lexend Deca",
+              variants: ["400"],
+            },
+          ],
+        },
       },
     },
   ],
