@@ -28,6 +28,21 @@ class TabsPage extends React.Component {
           <h1 className="title">Tabs</h1>
           <section className="section tab-bundles">
             <div className="container columns">
+            <BundleCard
+                name={"All Covers Bundle"}
+                description={"Tabs for all my covers."}
+                cta={"Buy - $34.99"}
+                img={this.props.data.freeImage.childImageSharp.fluid}
+                pid={"JGHHET"}
+              />
+              
+              <BundleCard
+                name={"Tool Tabs Bundle"}
+                description={"Tabs for all my TOOL covers."}
+                cta={"Buy - $14.99"}
+                img={this.props.data.herramientaImage.childImageSharp.fluid}
+                pid={"bMHQ"}
+              />
               <BundleCard
                 name={"Free Tabs Bundle"}
                 description={"Get access to all of the available free tabs."}
@@ -36,13 +51,6 @@ class TabsPage extends React.Component {
                 pid={"free"}
               />
 
-              <BundleCard
-                name={"Tool Tabs Bundle"}
-                description={"Tabs for all my TOOL covers."}
-                cta={"Buy - $14.99"}
-                img={this.props.data.herramientaImage.childImageSharp.fluid}
-                pid={"bMHQ"}
-              />
               <BundleCard
                 name={"Worldbuilding"}
                 description={
@@ -181,7 +189,7 @@ class SingleTabs extends React.Component {
 
     return (
       <section className="section single-tabs">
-        <h2 className="subtitle is-uppercase is-bold">Single Tabs</h2>
+        <h2 className="subtitle is-uppercase is-bold">Individual Tabs</h2>
         <div className="tabs is-right is-boxed is-small">
           <ul>{tabs}</ul>
         </div>
