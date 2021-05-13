@@ -31,7 +31,7 @@ class TabsPage extends React.Component {
             <BundleCard
                 name={"All Covers Bundle"}
                 description={"Tabs for all my covers."}
-                cta={"Buy - $34.99"}
+                cta={"Buy - $39.99"}
                 img={this.props.data.freeImage.childImageSharp.fluid}
                 pid={"JGHHET"}
               />
@@ -39,7 +39,7 @@ class TabsPage extends React.Component {
               <BundleCard
                 name={"Tool Tabs Bundle"}
                 description={"Tabs for all my TOOL covers."}
-                cta={"Buy - $14.99"}
+                cta={"Buy - $19.99"}
                 img={this.props.data.herramientaImage.childImageSharp.fluid}
                 pid={"bMHQ"}
               />
