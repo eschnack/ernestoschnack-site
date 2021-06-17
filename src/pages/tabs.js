@@ -28,14 +28,14 @@ class TabsPage extends React.Component {
           <h1 className="title">Tabs</h1>
           <section className="section tab-bundles">
             <div className="container columns">
-            <BundleCard
-                name={"All Covers Bundle"}
-                description={"Tabs for all my covers."}
-                cta={"Buy - $39.99"}
+              <BundleCard
+                name={"Free Tabs Bundle"}
+                description={"Get access to all of the available free tabs."}
+                cta={"Free Download"}
                 img={this.props.data.freeImage.childImageSharp.fluid}
-                pid={"JGHHET"}
+                pid={"free"}
               />
-              
+
               <BundleCard
                 name={"Tool Tabs Bundle"}
                 description={"Tabs for all my TOOL covers."}
@@ -43,12 +43,13 @@ class TabsPage extends React.Component {
                 img={this.props.data.herramientaImage.childImageSharp.fluid}
                 pid={"bMHQ"}
               />
+
               <BundleCard
-                name={"Free Tabs Bundle"}
-                description={"Get access to all of the available free tabs."}
-                cta={"Free Download"}
+                name={"All Covers Bundle"}
+                description={"Tabs for all my covers."}
+                cta={"Buy - $39.99"}
                 img={this.props.data.freeImage.childImageSharp.fluid}
-                pid={"free"}
+                pid={"JGHHET"}
               />
 
               <BundleCard
@@ -70,7 +71,6 @@ class TabsPage extends React.Component {
 }
 
 class BundleCard extends React.Component {
-
   render() {
     if (this.props.pid === "free") {
       return (
@@ -113,7 +113,6 @@ class BundleCard extends React.Component {
             </div>
           </div>
           <footer className="card-footer">
-            
             <a
               className="button is-primary card-footer-item"
               href={"https://gum.co/" + this.props.pid}
@@ -200,7 +199,6 @@ class SingleTabs extends React.Component {
 }
 
 class SingleTab extends React.Component {
- 
   render() {
     if (this.props.cta === "free") {
       return (
