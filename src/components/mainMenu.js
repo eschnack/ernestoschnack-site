@@ -47,6 +47,9 @@ class MainMenu extends React.Component {
             <div className="navbar-end">
               <MenuLink to="/music/">Music</MenuLink>
               <MenuLink to="/tabs/">Tabs</MenuLink>
+              <a href="https://ernesto-schnack.creator-spring.com/" className="navbar-item" target="_blank" rel="noopener noreferrer">
+        Merch
+      </a>
               <MenuLink to="/videos/">Videos</MenuLink>
               <MenuLink to="/about/">About</MenuLink>
             </div>
