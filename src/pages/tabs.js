@@ -47,7 +47,7 @@ class TabsPage extends React.Component {
               <BundleCard
                 name={"All Covers Bundle"}
                 description={"Tabs for all my covers."}
-                cta={"Buy - $39.99"}
+                cta={"Buy - $34.99"}
                 img={this.props.data.freeImage.childImageSharp.fluid}
                 pid={"JGHHET"}
               />
