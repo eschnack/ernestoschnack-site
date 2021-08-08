@@ -22,7 +22,7 @@ function SEO({ description, lang, meta, title, image, follow }) {
           }
         }
         allImageSharp(
-          filter: { sizes: { originalName: { eq: "ernesto-schnack-03.jpg" } } }
+          filter: { fluid: { originalName: { eq: "ernesto-schnack-03.jpg" } } }
         ) {
           edges {
             node {
@@ -31,7 +31,7 @@ function SEO({ description, lang, meta, title, image, follow }) {
                 height
                 src
               }
-              sizes {
+              fluid {
                 originalName
                 src
               }
@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title, image, follow }) {
   )
 
   const metaDescription = description || data.site.siteMetadata.description
-  const metaImage = image || data.allImageSharp.edges[0].node.sizes.src
+  const metaImage = image || data.allImageSharp.edges[0].node.fluid.src
   const metaFollow = follow || "all"
   return (
     <Helmet

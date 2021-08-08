@@ -3,6 +3,7 @@ import "../pages/mystyles.scss"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
 import { FaSpotify, FaApple, FaAngleLeft, FaBandcamp } from "react-icons/fa"
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 

@@ -27,15 +27,15 @@ const Image = () => {
         relativePath: { eq: "herramienta-cover-web.png" }
       ) {
         childImageSharp {
-          sizes(maxWidth: 400) {
-            ...GatsbyImageSharpSizes
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  return <Img sizes={data.HerramientaImage.childImageSharp.sizes} />
+  return <Img fluid={data.HerramientaImage.childImageSharp.fluid} />
 }
 
 export default Image
