@@ -7,6 +7,7 @@ import { MdFileDownload, MdShoppingCart } from "react-icons/md"
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
+import { Helmet } from "react-helmet"
 
 class TabsPage extends React.Component {
   render() {
@@ -23,6 +24,7 @@ class TabsPage extends React.Component {
 
     return (
       <Layout>
+        
         <SEO title="Tabs" />
         <div className="container">
           <h1 className="title">Tabs</h1>

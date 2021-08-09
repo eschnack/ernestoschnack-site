@@ -28,7 +28,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="https://gumroad.com/js/gumroad.js"></script>
+        <script src="https://gumroad.com/js/gumroad.js" defer></script>
       </body>
     </html>
   )

@@ -37,8 +37,8 @@
     "react-obfuscate": "^3.6.8"
   },
   "devDependencies": {
-    "prettier": "^2.3.2",
-    "postcss": "^8.2.7"
+    "postcss": "^8.2.7",
+    "prettier": "^2.3.2"
   },
   "keywords": [
     "gatsby"
