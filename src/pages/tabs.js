@@ -10,6 +10,7 @@ import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 
 class TabsPage extends React.Component {
+
   render() {
     let filterObj = {
       all: { name: "All" },
@@ -20,8 +21,10 @@ class TabsPage extends React.Component {
       free: { name: "Free" },
     }
 
+
     let tabList = this.props.data.allMarkdownRemark.edges
 
+    
     return (
       <Layout>
         
@@ -248,6 +251,8 @@ class SingleTab extends React.Component {
     }
   }
 }
+
+
 
 export default props => (
   <StaticQuery

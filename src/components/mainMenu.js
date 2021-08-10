@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import logo from "../images/logohori.png"
 //import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { StaticQuery, graphql } from "gatsby"
@@ -23,7 +24,11 @@ class MainMenu extends React.Component {
       <nav className="navbar is-transparent">
         <div className="container">
           <div className="navbar-brand">
-            <MenuLink to="/">Ernesto Schnack</MenuLink>
+            <h1>
+            <MenuLink to="/">
+            <img src={logo} alt="Ernesto Schnack" />
+            </MenuLink>
+            </h1>
             <span
               className={
                 this.state.active === true
@@ -75,23 +80,6 @@ class MenuLink extends React.Component {
   }
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        ernestoLogo: file(relativePath: { eq: "ernestoschnack-logo2.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 999) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={({ ernestoLogo }) => (
-      <MainMenu ernestoLogo={ernestoLogo} {...props} />
-    )}
-  />
-)
 
-//export default MainMenu
+
+export default MainMenu
