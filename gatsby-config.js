@@ -50,7 +50,7 @@ module.exports = {
         short_name: `Ernesto Schnack`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#2c84de`,
+        theme_color: `#14466a`,
         display: `standalone`,
         icon: `src/images/es_logo.png`, // This path is relative to the root of the site.
       },
