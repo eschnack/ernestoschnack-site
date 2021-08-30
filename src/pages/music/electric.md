@@ -5,5 +5,5 @@ title: Electric
 buy: https://ernestoschnack.bandcamp.com/album/electric
 spotify: 6QasJYTrq8WbNkROixLkZi
 apple: electric-ep/1580114393
-cover: static/images/eletricep-copy.jpg
+cover: /images/eletricep-copy.jpg
 ---
