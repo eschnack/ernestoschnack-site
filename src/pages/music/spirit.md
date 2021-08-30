@@ -5,6 +5,6 @@ title: Spirit
 buy: 'https://ernestoschnack.bandcamp.com/album/spirit'
 spotify: 40X0a5jFDs3gcGNiZDWenh
 apple: spirit/1540395707
-cover: /static/images/covers-copy.jpg
+cover: /images/covers-copy.jpg
 ---
 
