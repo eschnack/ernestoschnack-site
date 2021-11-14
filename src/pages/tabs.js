@@ -33,30 +33,7 @@ class TabsPage extends React.Component {
           <h1 className="title">Tabs</h1>
           <section className="section tab-bundles">
             <div className="container columns">
-              <BundleCard
-                name={"Free Tabs Bundle"}
-                description={"Get access to all of the available free tabs."}
-                cta={"Free Download"}
-                img={this.props.data.freeImage.childImageSharp.fluid}
-                pid={"free"}
-              />
-
-              <BundleCard
-                name={"Tool Tabs Bundle"}
-                description={"Tabs for all my TOOL covers."}
-                cta={"Buy - $19.99"}
-                img={this.props.data.herramientaImage.childImageSharp.fluid}
-                pid={"bMHQ"}
-              />
-
-              <BundleCard
-                name={"All Covers Bundle"}
-                description={"Tabs for all my covers."}
-                cta={"Buy - $34.99"}
-                img={this.props.data.freeImage.childImageSharp.fluid}
-                pid={"JGHHET"}
-              />
-
+              
               <BundleCard
                 name={"Worldbuilding"}
                 description={
@@ -158,7 +135,7 @@ class SingleTabs extends React.Component {
     })
 
     let tabList = this.props.tabs
-    console.log(tabList)
+
 
     let tabListSorted = tabList.map(val => {
       if (this.state.active === "All") {
@@ -167,6 +144,7 @@ class SingleTabs extends React.Component {
             name={val.node.frontmatter.title}
             cta={val.node.frontmatter.cta}
             key={val.node.id}
+            url={val.node.frontmatter.url}
           />
         )
       } else if (
@@ -186,6 +164,7 @@ class SingleTabs extends React.Component {
             name={val.node.frontmatter.title}
             cta={val.node.frontmatter.cta}
             key={val.node.id}
+            url={val.node.frontmatter.url}
           />
         )
       }
@@ -225,6 +204,30 @@ class SingleTab extends React.Component {
           </div>
         </nav>
       )
+    } else if(this.props.cta === "musicnotes") {
+      return (
+        <nav className="level tool is-marginless">
+          <div className="level-left">
+            <div className="level-item">
+              <h3>{this.props.name}</h3>
+            </div>
+          </div>
+          <div className="level-right">
+            <div className="level-item">
+              <a
+                className="button is-primary"
+                href={this.props.url}
+                target="_blank"
+              >
+                <span className="icon">
+                  <MdShoppingCart />
+                </span>
+                &nbsp;Buy
+              </a>
+            </div>
+          </div>
+        </nav>
+      )
     } else {
       return (
         <nav className="level tool is-marginless">
@@ -242,7 +245,7 @@ class SingleTab extends React.Component {
                 <span className="icon">
                   <MdShoppingCart />
                 </span>
-                &nbsp;Buy - $3.50
+                &nbsp;Buy
               </a>
             </div>
           </div>
@@ -293,6 +296,7 @@ export default props => (
                 title
                 cta
                 type
+                url
               }
               fields {
                 slug
