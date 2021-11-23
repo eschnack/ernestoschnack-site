@@ -26,11 +26,7 @@ const FreeTabs = () => (
                   Right In Two
                 </a>
               </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Forty_Six_and_2-Ernesto_Schnack.zip">
-                  Forty Six & 2
-                </a>
-              </li>
+
               <li>
                 <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Sober-Ernesto_Schnack.zip">
                   Sober
@@ -41,16 +37,7 @@ const FreeTabs = () => (
                   jimmy
                 </a>
               </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Judith-Ernesto_Schnack.zip">
-                  Judith
-                </a>
-              </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Orestes-Ernesto_Schnack.zip">
-                  Orestes
-                </a>
-              </li>
+
             </ul>
           </div>
           <div className="box free-tabs">
@@ -71,41 +58,19 @@ const FreeTabs = () => (
                   The Bear And The Maiden Fair
                 </a>
               </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Goodbye_Brother-Ernesto_Schnack.pdf">
-                  Goodbye Brother
-                </a>
-              </li>
+
             </ul>
           </div>
           <div className="box free-tabs">
             <h3>Others</h3>
             <ul>
-            <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Aerials-Ernesto_Schnack.zip">
-                  Aerials
-                </a>
-              </li>
+            
               <li>
                 <a href="https://f002.backblazeb2.com/file/eschnack-downloads/The_Savage_Myth.zip">
                   The Savage Myth
                 </a>
               </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Digital_Bath-Ernesto_Schnack.zip">
-                  Digital Bath
-                </a>
-              </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Leftovers-Ernesto_Schnack.zip">
-                  The Leftovers - Departure
-                </a>
-              </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Imperial_March-Ernesto_Schnack.zip">
-                  Star Wars - Imperial March
-                </a>
-              </li>
+             
             </ul>
           </div>
         </div>
