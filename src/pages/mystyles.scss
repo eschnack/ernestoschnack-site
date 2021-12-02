@@ -86,7 +86,6 @@ body {
   font-family: "Lexend Deca", sans-serif;
 }
 
-
 .navbar-link:not(.is-arrowless)::after {
   border-width: 2px;
 }
@@ -101,27 +100,26 @@ body {
 
 .navbar-end a.navbar-item.is-active,
 a.navbar-item:hover {
-color: #fff;
+  color: #fff;
 }
 
 .navbar-brand {
   text-transform: uppercase;
   font-size: 32px;
-  align-items:center;
+  align-items: center;
 }
 
 .navbar-brand h1 {
   max-width: 300px;
- 
 }
 
-.navbar-brand img{
+.navbar-brand img {
   transition: 0.3s;
-  filter:brightness(1.5);
+  filter: brightness(1.5);
 }
 
 .navbar-brand img:hover {
-  filter:brightness(1.3);
+  filter: brightness(1.3);
 }
 
 .footer {
@@ -207,13 +205,15 @@ color: #fff;
 
 .album .image,
 .pics .image,
-.video-grid .image {
+.video-grid .image,
+.merch .image {
   transition: 0.3s;
 }
 
 .album .image:hover,
 .pics .column > .image:hover,
-.video-grid .image:hover {
+.video-grid .image:hover,
+.merch .image:hover {
   transform: scale(1.03);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -266,7 +266,7 @@ color: #fff;
 }
 
 .tab-bundles .container {
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .single-tabs .level {
@@ -415,7 +415,7 @@ color: #fff;
     position: absolute; /* or float: left; width: 100%;*/
     left: 0;
     right: 0;
-    top:70px;
+    top: 70px;
     opacity: 0;
     /*transform: translateY(-50%);*/
     transition: all 0.4s ease-in-out;

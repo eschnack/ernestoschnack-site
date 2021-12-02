@@ -14,7 +14,7 @@ class VideoGrid extends React.Component {
   }
 }
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -22,6 +22,8 @@ export default props => (
           filter: {
             videoId: {
               in: [
+                "rfq_DMeYVYE"
+                "YxcPeNntH2w"
                 "Uy5lXaXIQiA"
                 "oShb_oO5Y80"
                 "LM-iah-TVa8"
@@ -93,6 +95,6 @@ export default props => (
         }
       }
     `}
-    render={data => <VideoGrid data={data} {...props} />}
+    render={(data) => <VideoGrid data={data} {...props} />}
   />
 )

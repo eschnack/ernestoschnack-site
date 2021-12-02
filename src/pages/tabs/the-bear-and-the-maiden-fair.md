@@ -1,6 +1,6 @@
 ---
 title: The Bear And The Maiden Fair
-cta: free
+cta: musicnotes
 type: Game Of Thrones
+url: https://www.musicnotes.com/sheetmusic/mtd.asp?ppn=MN0245782
 ---
-

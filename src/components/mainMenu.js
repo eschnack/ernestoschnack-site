@@ -25,9 +25,9 @@ class MainMenu extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <h1>
-            <MenuLink to="/">
-            <img src={logo} alt="Ernesto Schnack" />
-            </MenuLink>
+              <MenuLink to="/">
+                <img src={logo} alt="Ernesto Schnack" />
+              </MenuLink>
             </h1>
             <span
               className={
@@ -52,9 +52,7 @@ class MainMenu extends React.Component {
             <div className="navbar-end">
               <MenuLink to="/music/">Music</MenuLink>
               <MenuLink to="/tabs/">Tabs</MenuLink>
-              <a href="https://ernesto-schnack.creator-spring.com/" className="navbar-item" target="_blank" rel="noopener noreferrer">
-        Merch
-      </a>
+              <MenuLink to="/merch/">Merch</MenuLink>
               <MenuLink to="/videos/">Videos</MenuLink>
               <MenuLink to="/about/">About</MenuLink>
             </div>
@@ -79,7 +77,5 @@ class MenuLink extends React.Component {
     )
   }
 }
-
-
 
 export default MainMenu
