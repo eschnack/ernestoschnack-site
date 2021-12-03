@@ -3,7 +3,8 @@ import "../pages/mystyles.scss"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
 import { FaSpotify, FaApple, FaAngleLeft, FaBandcamp } from "react-icons/fa"
-import { graphql } from 'gatsby'
+import { MdShoppingCart } from "react-icons/md"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
@@ -83,10 +84,10 @@ class BuyButton extends React.Component {
       return (
         <a
           className={"button is-primary is-fullwidth"}
-          href={this.props.buyLink}
+          href={"https://gum.co/" + this.props.buyLink}
         >
-          <FaBandcamp />
-          &nbsp;Buy on Bandcamp
+          <MdShoppingCart />
+          &nbsp;Buy
         </a>
       )
     } else {
@@ -96,7 +97,7 @@ class BuyButton extends React.Component {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

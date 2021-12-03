@@ -10,7 +10,7 @@ import {
   FaBandcamp,
   FaVolumeDown,
 } from "react-icons/fa"
-
+import { MdShoppingCart } from "react-icons/md"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -18,7 +18,7 @@ const MusicPage = ({ data }) => {
   let albums = []
   let singles = []
 
-  data.allMarkdownRemark.edges.map(node => {
+  data.allMarkdownRemark.edges.map((node) => {
     if (node.node.frontmatter.type === "album") {
       albums.push(node)
     } else {
@@ -141,9 +141,12 @@ class Album extends React.Component {
 class BuyButton extends React.Component {
   render() {
     return (
-      <a className={"button is-primary is-fullwidth"} href={this.props.buyLink}>
-        <FaBandcamp />
-        &nbsp;Buy on Bandcamp
+      <a
+        className={"button is-primary is-fullwidth"}
+        href={"https://gum.co/" + this.props.buyLink}
+      >
+        <MdShoppingCart />
+        &nbsp;Buy
       </a>
     )
   }
