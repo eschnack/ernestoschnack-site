@@ -2,7 +2,8 @@ import React from "react"
 import "./mystyles.scss"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import { MdFileDownload, MdShoppingCart } from "react-icons/md"
+import { MdFileDownload, MdShoppingCart, MdOutbound } from "react-icons/md"
+import { HiOutlineExternalLink } from "react-icons/hi"
 
 import Layout from "../components/layout"
 
@@ -10,7 +11,6 @@ import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 
 class TabsPage extends React.Component {
-
   render() {
     let filterObj = {
       all: { name: "All" },
@@ -21,19 +21,15 @@ class TabsPage extends React.Component {
       free: { name: "Free" },
     }
 
-
     let tabList = this.props.data.allMarkdownRemark.edges
 
-    
     return (
       <Layout>
-        
         <SEO title="Tabs" />
         <div className="container">
           <h1 className="title">Tabs</h1>
           <section className="section tab-bundles">
             <div className="container columns">
-              
               <BundleCard
                 name={"Worldbuilding"}
                 description={
@@ -120,7 +116,7 @@ class SingleTabs extends React.Component {
     this.setState({ active: value })
   }
   render() {
-    let tabs = Object.values(this.props.filterTabs).map(val => {
+    let tabs = Object.values(this.props.filterTabs).map((val) => {
       return (
         <li
           className={val.name === this.state.active ? "is-active" : ""}
@@ -136,8 +132,7 @@ class SingleTabs extends React.Component {
 
     let tabList = this.props.tabs
 
-
-    let tabListSorted = tabList.map(val => {
+    let tabListSorted = tabList.map((val) => {
       if (this.state.active === "All") {
         return (
           <SingleTab
@@ -204,7 +199,7 @@ class SingleTab extends React.Component {
           </div>
         </nav>
       )
-    } else if(this.props.cta === "musicnotes") {
+    } else if (this.props.cta === "musicnotes") {
       return (
         <nav className="level tool is-marginless">
           <div className="level-left">
@@ -219,10 +214,10 @@ class SingleTab extends React.Component {
                 href={this.props.url}
                 target="_blank"
               >
+                Buy on Musicnotes &nbsp;
                 <span className="icon">
-                  <MdShoppingCart />
+                  <HiOutlineExternalLink />
                 </span>
-                &nbsp;Buy
               </a>
             </div>
           </div>
@@ -255,9 +250,7 @@ class SingleTab extends React.Component {
   }
 }
 
-
-
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -306,6 +299,6 @@ export default props => (
         }
       }
     `}
-    render={data => <TabsPage data={data} {...props} />}
+    render={(data) => <TabsPage data={data} {...props} />}
   />
 )
