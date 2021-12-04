@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import MainMenu from "./mainMenu"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import {
   FaTwitter,
   FaFacebook,
@@ -46,6 +46,9 @@ const Layout = ({ children }) => {
       <section className="wrapper">{children}</section>
       <footer className="footer">
         <div className="container">
+          <div className="info-links">
+            <Link to="/shipping">Shipping Policies</Link>
+          </div>
           <nav className="level">
             <div className="level-left">
               <div className="level-item">
