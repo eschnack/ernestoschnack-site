@@ -254,8 +254,32 @@ a.navbar-item:hover {
   margin: 0 auto;
 }
 
+.album-detail h3 {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 20px 0 10px 0;
+}
+
 .album-detail .button {
   margin-bottom: 10px;
+}
+
+.album-detail ol {
+  list-style-position: inside;
+  border-top: 1px solid #eee;
+}
+
+.album-detail ol > li {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.album-detail li > em {
+  display: inline-block;
+  position: absolute;
+  right: 0;
 }
 
 .tab-bundles .card-header {

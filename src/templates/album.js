@@ -37,6 +37,9 @@ const AlbumPage = ({ data }) => (
                 }
               />
             </figure>
+            <div
+              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            />
           </div>
           <div className="content column is-one-third">
             <BuyButton buyLink={data.markdownRemark.frontmatter.buy} />
