@@ -13,9 +13,9 @@ class MerchPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Tabs" />
+        <SEO title="Merch" />
         <div className="container">
-          <h1 className="title">Tabs</h1>
+          <h1 className="title">Merch</h1>
           <section className="section tab-bundles">
             <div className="container columns">
               <BundleCard
