@@ -15,6 +15,10 @@ export default function HTML(props) {
           name="google-site-verification"
           content="JsgMbEr06fIWgCpH3medokdeVUxO2cFEBwPDbxUVN9U"
         />
+        <meta
+          name="facebook-domain-verification"
+          content="y9tuctkzqqsov9u983aos9ehg1ejhw"
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
