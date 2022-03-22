@@ -35,7 +35,7 @@ class TabsPage extends React.Component {
                 description={
                   "Tabs for all the songs on the Worldbuilding album."
                 }
-                cta={"Buy - $21.00"}
+                cta={"Buy - $24.00"}
                 img={this.props.data.wbImage.childImageSharp.fluid}
                 pid={"WXUT"}
               />

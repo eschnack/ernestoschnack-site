@@ -53,6 +53,7 @@ class MainMenu extends React.Component {
               <MenuLink to="/music/">Music</MenuLink>
               <MenuLink to="/tabs/">Tabs</MenuLink>
               <MenuLink to="/merch/">Merch</MenuLink>
+              <MenuLink to="/live/">Live</MenuLink>
               <MenuLink to="/videos/">Videos</MenuLink>
               <MenuLink to="/about/">About</MenuLink>
             </div>
