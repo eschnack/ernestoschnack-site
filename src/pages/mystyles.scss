@@ -286,12 +286,17 @@ a.navbar-item:hover {
 .tab-bundles .card-header {
   margin-bottom: 20px;
 }
-.tab-bundles .card-content .content p {
-  min-height: 54px;
+.tab-bundles .card-content .content {
+  min-height: 132px;
 }
 
 .tab-bundles .container {
   flex-wrap: wrap;
+}
+
+.tab-bundles > .subtitle,
+.single-tabs > .subtitle {
+  border-bottom: 2px solid #247ab7;
 }
 
 .single-tabs .level {

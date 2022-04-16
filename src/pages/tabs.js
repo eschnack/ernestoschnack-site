@@ -29,15 +29,74 @@ class TabsPage extends React.Component {
         <div className="container">
           <h1 className="title">Tabs</h1>
           <section className="section tab-bundles">
+            <h2 className="subtitle is-uppercase is-bold">
+              Collections and Bundles
+            </h2>
             <div className="container columns">
               <BundleCard
-                name={"Worldbuilding"}
+                name={"System Of A Down Collection"}
+                description={"Tabs for Toxicity, Aerials and Spiders."}
+                cta={"Buy on Musicnotes"}
+                img={this.props.data.soadImage.childImageSharp.fluid}
+                pid={
+                  "https://www.musicnotes.com/sheetmusic/col.asp?ppn=CL0009886"
+                }
+              />
+              <BundleCard
+                name={"Tool Collection #1"}
+                description={"Tabs for Forty Six & 2, Sober and H."}
+                cta={"Buy on Musicnotes"}
+                img={this.props.data.tool1Image.childImageSharp.fluid}
+                pid={
+                  "https://www.musicnotes.com/sheetmusic/col.asp?ppn=CL0009891"
+                }
+              />
+              <BundleCard
+                name={"Tool Collection #2"}
+                description={"Tabs for Right In Two, Schism and jimmy."}
+                cta={"Buy on Musicnotes"}
+                img={this.props.data.tool2Image.childImageSharp.fluid}
+                pid={
+                  "https://www.musicnotes.com/sheetmusic/col.asp?ppn=CL0009890"
+                }
+              />
+              <BundleCard
+                name={"Tool Collection #3"}
+                description={"Tabs for Pneuma, Stinkfist and No Quarter."}
+                cta={"Buy on Musicnotes"}
+                img={this.props.data.tool3Image.childImageSharp.fluid}
+                pid={
+                  "https://www.musicnotes.com/sheetmusic/col.asp?ppn=CL0009889"
+                }
+              />
+              <BundleCard
+                name={"Tool Collection #4"}
+                description={"Tabs for Lateralus, Invincible and Descending."}
+                cta={"Buy on Musicnotes"}
+                img={this.props.data.tool4Image.childImageSharp.fluid}
+                pid={
+                  "https://www.musicnotes.com/sheetmusic/col.asp?ppn=CL0009888"
+                }
+              />
+              <BundleCard
+                name={"A Perfect Circle Collection"}
+                description={
+                  "Tabs for Orestes, 3 Libras, Judith and The Outsider."
+                }
+                cta={"Buy on Musicnotes"}
+                img={this.props.data.apcImage.childImageSharp.fluid}
+                pid={
+                  "https://www.musicnotes.com/sheetmusic/col.asp?ppn=CL0009887"
+                }
+              />
+              <BundleCard
+                name={"Worldbuilding Collection"}
                 description={
                   "Tabs for all the songs on the Worldbuilding album."
                 }
                 cta={"Buy - $24.00"}
                 img={this.props.data.wbImage.childImageSharp.fluid}
-                pid={"WXUT"}
+                pid={"https://gum.co/WXUT"}
               />
             </div>
           </section>
@@ -52,7 +111,7 @@ class BundleCard extends React.Component {
   render() {
     if (this.props.pid === "free") {
       return (
-        <div className="card column is-one-third tab-bundle">
+        <div className="card column is-one-fourth tab-bundle">
           <div className="card-content">
             <div className="card-image">
               <figure className="image is-fullwidth">
@@ -77,7 +136,7 @@ class BundleCard extends React.Component {
       )
     } else {
       return (
-        <div className="card column is-one-third tab-bundle">
+        <div className="card column is-one-quarter tab-bundle">
           <div className="card-content">
             <div className="card-image">
               <figure className="image is-fullwidth">
@@ -93,7 +152,7 @@ class BundleCard extends React.Component {
           <footer className="card-footer">
             <a
               className="button is-primary card-footer-item"
-              href={"https://gum.co/" + this.props.pid}
+              href={this.props.pid}
             >
               <span className="icon">
                 <MdShoppingCart />
@@ -254,23 +313,49 @@ export default (props) => (
   <StaticQuery
     query={graphql`
       query {
-        herramientaImage: file(
-          relativePath: { eq: "herramienta-bundle-2.jpg" }
-        ) {
+        tool1Image: file(relativePath: { eq: "tool1bundle.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        wbImage: file(relativePath: { eq: "wb-bundle-2.jpg" }) {
+        wbImage: file(relativePath: { eq: "wbbundle.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        freeImage: file(relativePath: { eq: "free-bundle.jpg" }) {
+        tool2Image: file(relativePath: { eq: "tool2bundle.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        tool3Image: file(relativePath: { eq: "tool3bundle.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        tool4Image: file(relativePath: { eq: "tool4bundle.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        apcImage: file(relativePath: { eq: "apcbundle.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        soadImage: file(relativePath: { eq: "soadbundle.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid
