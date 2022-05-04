@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: '1397536553777691',
+        pixelId: "1397536553777691",
       },
     },
     {
@@ -41,7 +41,7 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
