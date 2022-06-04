@@ -26,7 +26,6 @@ const MusicPage = ({ data }) => {
     }
   })
 
-  console.log(albums)
   return (
     <Layout>
       <SEO title="Music" />
@@ -143,10 +142,11 @@ class BuyButton extends React.Component {
     return (
       <a
         className={"button is-primary is-fullwidth"}
-        href={"https://gum.co/" + this.props.buyLink}
+        href={this.props.buyLink}
+        target="_blank"
       >
-        <MdShoppingCart />
-        &nbsp;Buy
+        <FaBandcamp />
+        &nbsp;Buy on Bandcamp
       </a>
     )
   }
