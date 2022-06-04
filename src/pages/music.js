@@ -142,11 +142,10 @@ class BuyButton extends React.Component {
     return (
       <a
         className={"button is-primary is-fullwidth"}
-        href={this.props.buyLink}
-        target="_blank"
+        href={"https://gum.co/" + this.props.buyLink}
       >
-        <FaBandcamp />
-        &nbsp;Buy on Bandcamp
+        <MdShoppingCart />
+        &nbsp;Digital Download
       </a>
     )
   }
