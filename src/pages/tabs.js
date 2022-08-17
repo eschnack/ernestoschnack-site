@@ -248,7 +248,7 @@ class SingleTab extends React.Component {
           </div>
           <div className="level-right">
             <div className="level-item">
-              <Link to="/signup" className="button is-primary">
+              <Link to="/tabs/free-tabs" className="button is-primary">
                 <span className="icon">
                   <MdFileDownload />
                 </span>

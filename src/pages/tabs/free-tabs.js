@@ -11,35 +11,8 @@ const FreeTabs = () => (
   <Layout>
     <SEO title="Free Tabs" follow="none" />
     <div className="container success">
-      <h1 className="title">Thanks for signing up!</h1>
       <section>
         <div className="content">
-          <p>
-            Here are all the free tabs available so far. Bookmark this link so
-            you can come back to it at any time.
-          </p>
-          <div className="box free-tabs">
-            <h3>Tool/A Perfect Circle</h3>
-            <ul>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Right_In_Two-Ernesto_Schnack.zip">
-                  Right In Two
-                </a>
-              </li>
-
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/Sober-Ernesto_Schnack.zip">
-                  Sober
-                </a>
-              </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/jimmy-Ernesto_Schnack.zip">
-                  jimmy
-                </a>
-              </li>
-
-            </ul>
-          </div>
           <div className="box free-tabs">
             <h3>Game Of Thrones</h3>
             <ul>
@@ -53,24 +26,16 @@ const FreeTabs = () => (
                   Rains Of Castamere
                 </a>
               </li>
-              <li>
-                <a href="https://f002.backblazeb2.com/file/eschnack-downloads/The_Bear_and_the_Maiden_Fair-Ernesto_Schnack.zip">
-                  The Bear And The Maiden Fair
-                </a>
-              </li>
-
             </ul>
           </div>
           <div className="box free-tabs">
             <h3>Others</h3>
             <ul>
-            
               <li>
                 <a href="https://f002.backblazeb2.com/file/eschnack-downloads/The_Savage_Myth.zip">
                   The Savage Myth
                 </a>
               </li>
-             
             </ul>
           </div>
         </div>

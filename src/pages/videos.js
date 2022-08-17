@@ -13,7 +13,7 @@ const VideosPage = ({ data }) => (
     <SEO title="Videos" />
     <div className="container">
       <h1 className="title">Videos</h1>
-      <VideoGrid limit="52" />
+      <VideoGrid limit="55" />
     </div>
   </Layout>
 )
