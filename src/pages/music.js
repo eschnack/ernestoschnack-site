@@ -140,12 +140,9 @@ class Album extends React.Component {
 class BuyButton extends React.Component {
   render() {
     return (
-      <a
-        className={"button is-primary is-fullwidth"}
-        href={"https://gum.co/" + this.props.buyLink}
-      >
-        <MdShoppingCart />
-        &nbsp;Digital Download
+      <a className={"button is-primary is-fullwidth"} href={this.props.buyLink}>
+        <FaBandcamp />
+        &nbsp;Buy on Bandcamp
       </a>
     )
   }
