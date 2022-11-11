@@ -10,7 +10,7 @@ import {
   FaBandcamp,
   FaVolumeDown,
 } from "react-icons/fa"
-import { MdShoppingCart } from "react-icons/md"
+import { MdHeadphones } from "react-icons/md"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -106,7 +106,7 @@ class Album extends React.Component {
                   aria-haspopup="true"
                   aria-controls="dropdown-menu"
                 >
-                  <FaVolumeDown /> Listen <FaAngleDown />
+                  <MdHeadphones /> Listen <FaAngleDown />
                 </button>
               </div>
               <div class="dropdown-menu" id="dropdown-menu" role="menu">

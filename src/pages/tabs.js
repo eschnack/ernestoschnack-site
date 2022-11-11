@@ -111,55 +111,59 @@ class BundleCard extends React.Component {
   render() {
     if (this.props.pid === "free") {
       return (
-        <div className="card column is-one-fourth tab-bundle">
-          <div className="card-content">
-            <div className="card-image">
-              <figure className="image is-fullwidth">
-                <Img fluid={this.props.img} />
-              </figure>
-            </div>
+        <div className="column is-one-quarter">
+          <div className="card tab-bundle">
+            <div className="card-content">
+              <div className="card-image">
+                <figure className="image is-fullwidth">
+                  <Img fluid={this.props.img} />
+                </figure>
+              </div>
 
-            <div className="content">
-              <h3 className="subtitle">{this.props.name}</h3>
-              <p>{this.props.description}</p>
+              <div className="content">
+                <h3 className="subtitle">{this.props.name}</h3>
+                <p>{this.props.description}</p>
+              </div>
             </div>
+            <footer className="card-footer">
+              <Link to="/signup" className="button is-primary card-footer-item">
+                <span className="icon">
+                  <MdFileDownload />
+                </span>
+                &nbsp; {this.props.cta}
+              </Link>
+            </footer>
           </div>
-          <footer className="card-footer">
-            <Link to="/signup" className="button is-primary card-footer-item">
-              <span className="icon">
-                <MdFileDownload />
-              </span>
-              &nbsp; {this.props.cta}
-            </Link>
-          </footer>
         </div>
       )
     } else {
       return (
-        <div className="card column is-one-quarter tab-bundle">
-          <div className="card-content">
-            <div className="card-image">
-              <figure className="image is-fullwidth">
-                <Img fluid={this.props.img} />
-              </figure>
-            </div>
+        <div className="column is-one-quarter">
+          <div className="card tab-bundle">
+            <div className="card-content">
+              <div className="card-image">
+                <figure className="image is-fullwidth">
+                  <Img fluid={this.props.img} />
+                </figure>
+              </div>
 
-            <div className="content">
-              <h3 className="subtitle">{this.props.name}</h3>
-              <p>{this.props.description}</p>
+              <div className="content">
+                <h3 className="subtitle">{this.props.name}</h3>
+                <p>{this.props.description}</p>
+              </div>
             </div>
+            <footer className="card-footer">
+              <a
+                className="button is-primary card-footer-item"
+                href={this.props.pid}
+              >
+                <span className="icon">
+                  <MdShoppingCart />
+                </span>
+                &nbsp;{this.props.cta}
+              </a>
+            </footer>
           </div>
-          <footer className="card-footer">
-            <a
-              className="button is-primary card-footer-item"
-              href={this.props.pid}
-            >
-              <span className="icon">
-                <MdShoppingCart />
-              </span>
-              &nbsp;{this.props.cta}
-            </a>
-          </footer>
         </div>
       )
     }

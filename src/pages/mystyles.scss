@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 // If need, change your variables before importing Bulma
-$primary: #2c84de;
-$secondary: #f45303;
+$primary: #a31621;
+$secondary: #2c84de;
 $link: $primary;
 $family-primary: "Lexend Deca";
-$background: #fff;
+$background: #eff1f3;
 
 @import "~bulma/bulma.sass";
 
@@ -28,6 +28,11 @@ body {
   flex-shrink: 0;
 }
 
+.title {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 20px;
+}
+
 .music .button {
   transition: 0.3s;
   font-size: 14px;
@@ -46,7 +51,6 @@ body {
   padding: 0.75rem;
   height: auto;
   box-shadow: inset 1px 0px 10px lighten($primary, 5%);
-  border-color: #2982e0;
 }
 
 .button.is-primary:hover {
@@ -79,8 +83,8 @@ body {
 }
 
 .navbar {
-  background-color: #14466a;
-  border-bottom: 1px solid #14466a;
+  background-color: #223843;
+  border-bottom: 1px solid #3b525d;
   margin-bottom: 20px;
   padding: 20px 0;
   font-family: "Lexend Deca", sans-serif;
@@ -177,7 +181,12 @@ a.navbar-item:hover {
 }
 
 .card {
-  background-color: darken($background, 1%);
+  /*background-color: darken($background, 1%);*/
+  border-radius: 0;
+}
+
+.card-image:first-child img {
+  border-radius: 0;
 }
 
 .album.card {
@@ -221,6 +230,10 @@ a.navbar-item:hover {
 .pics .column > .image:hover,
 .video-grid .image:hover {
   cursor: pointer;
+}
+
+.title:not(.is-spaced) + .subtitle {
+  margin-top: 0;
 }
 
 .music > .subtitle {
@@ -296,12 +309,12 @@ a.navbar-item:hover {
 
 .tab-bundles > .subtitle,
 .single-tabs > .subtitle {
-  border-bottom: 2px solid #247ab7;
+  /* border-bottom: 2px solid #247ab7;*/
 }
 
 .single-tabs .level {
   padding: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #d1cccc;
   transition: 0.5s;
 }
 
@@ -377,6 +390,12 @@ a.navbar-item:hover {
   background: darken(#1da1f2, 5%);
 }
 
+.section.tab-bundles,
+.section.single-tabs {
+  padding: 0;
+  margin-bottom: 40px;
+}
+
 .tab-bundle {
   margin-bottom: 20px;
 }
@@ -384,6 +403,11 @@ a.navbar-item:hover {
 .tab-bundle .card-image {
   margin-bottom: 20px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tab-bundle .card-footer {
+  padding: 10px;
+  border: none;
 }
 
 .merch .card-image {
