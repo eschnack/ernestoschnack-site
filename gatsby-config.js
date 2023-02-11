@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Ernesto Schnack`,
@@ -32,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: "1397536553777691",
+        pixelId: process.env.FB_PX,
       },
     },
     {
@@ -60,7 +64,7 @@ module.exports = {
       resolve: `gatsby-source-youtube-v3`,
       options: {
         channelId: ["UCz1PeIEiNkKRwWDKFA6RkzQ"],
-        apiKey: "AIzaSyDjL_HBb28QB8Jl___MWijrvudMdaD_V_s",
+        apiKey: process.env.YT_API_KEY,
         maxVideos: 100, // Defaults to 50
       },
     },
