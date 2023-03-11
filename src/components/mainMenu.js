@@ -52,7 +52,13 @@ class MainMenu extends React.Component {
             <div className="navbar-end">
               <MenuLink to="/music/">Music</MenuLink>
               <MenuLink to="/tabs/">Tabs</MenuLink>
-              <MenuLink to="/merch/">Merch</MenuLink>
+              <a
+                href="//merch.ernestoschnack.com/"
+                target="blank"
+                className="navbar-item"
+              >
+                Merch
+              </a>
               <MenuLink to="/live/">Live</MenuLink>
               <MenuLink to="/videos/">Videos</MenuLink>
               <MenuLink to="/about/">About</MenuLink>
